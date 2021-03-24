@@ -1,13 +1,14 @@
 import React, { useContext, useState } from 'react'
+import XLSX from 'xlsx'
 
 const MapContext = React.createContext()
 const MapUpdateContext = React.createContext()
 
-export function useMap(){
+export function useMap() {
   return useContext(MapContext)
 }
 
-export function useMapUpdate(){
+export function useMapUpdate() {
   return useContext(MapUpdateContext)
 }
 
