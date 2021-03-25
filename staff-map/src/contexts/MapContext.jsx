@@ -16,9 +16,7 @@ export default function MapProvider({ children }) {
   const [staff, setStaff] = useState()
 
   function updateStaff(newStaff) {
-    data_cleaner(newStaff)
-    setStaff(newStaff)
-    // console.log(newStaff)
+    setStaff(data_cleaner(newStaff))
   }
 
   return (

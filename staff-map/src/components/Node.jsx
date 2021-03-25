@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function Node() {
+export default function Node(props) {
     return (
       <div>
-        nodes display detail modals on click
+        <div>{props.id}</div>
+        <div>{props.value}</div>
       </div>
     );
   }
