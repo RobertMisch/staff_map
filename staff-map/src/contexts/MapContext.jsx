@@ -1,13 +1,14 @@
 import React, { useContext, useState } from 'react'
+import data_cleaner from "../helper functions/DataCleaner"
 
 const MapContext = React.createContext()
 const MapUpdateContext = React.createContext()
 
-export function useMap(){
+export function useMap() {
   return useContext(MapContext)
 }
 
-export function useMapUpdate(){
+export function useMapUpdate() {
   return useContext(MapUpdateContext)
 }
 
@@ -15,8 +16,7 @@ export default function MapProvider({ children }) {
   const [staff, setStaff] = useState()
 
   function updateStaff(newStaff) {
-    setStaff(newStaff)
-    console.log(newStaff)
+    setStaff(data_cleaner(newStaff))
   }
 
   return (
